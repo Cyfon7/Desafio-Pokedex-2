@@ -1,4 +1,25 @@
-.card {
+#principal .col {
+    padding: 0px;
+}
+
+#principal .card {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0px;
+    width: 200px;
+}
+
+.card-img-top {
+    height: 150px;
+    width: 200px;
+    padding-top: 1rem;
+}
+
+.card-body {
+    padding: 0;
+    text-align: center;
     
 }
 
@@ -6,6 +27,26 @@
     text-transform: capitalize;
 }
 
-.modal-title {
-    text-transform: uppercase;
+#morePokemon {
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
 }
+
+#pokeImg {
+    height: 150px;
+    width: 200px;
+}
+
+.modal-body h5{
+    margin-top: 1rem;
+}
+
+#pokeType{
+    margin-bottom: 1rem;
+}
+
+#pokeFlavor {
+    margin-top: 2rem;
+}
+
