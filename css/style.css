@@ -1,0 +1,11 @@
+.card {
+    
+}
+
+.card-body h5, #pokeName h3 {
+    text-transform: capitalize;
+}
+
+.modal-title {
+    text-transform: uppercase;
+}
