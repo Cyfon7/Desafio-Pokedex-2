@@ -168,6 +168,9 @@ function update_pokemodal_1(pokename){
 			});
 
 			update_pokemodal_2(pokename)
+		})
+		.fail(function(){
+			console.log("Unknown Pokemon 1");
 		});
 }
 
@@ -176,6 +179,9 @@ function update_pokemodal_2(pokename){
 		.done(function(pokemon){
 			let modal = $('#pokeModal')
 			modal.find('#pokeFlavor').text(pokemon.flavor_text_entries[0].flavor_text)
+		})
+		.fail(function(){
+			console.log("Unknown Pokemon 2");
 		});
 }
 
@@ -196,6 +202,9 @@ function render_pokecards(offset){
 					.done(function(poke_data){
 						$('#row-'+(counter_row-1)).append(gen_pokecard(poke_data));
 						poke_count += 1;
+					})
+					.fail(function(){
+						console.log(poke_data.name + " has scaped");
 					});
 
 				if( poke_count == 4 ) {
@@ -203,7 +212,9 @@ function render_pokecards(offset){
 					$('#principal').append($('#row-'+(counter_row-1)));
 				}
 			});
-			
+		})
+		.fail(function(){
+			console.log("Too many pokemon's at the same time!!");
 		});
 }
 
